@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-const useFetch = (url) => {
+const usePost = (url) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -10,10 +10,10 @@ const useFetch = (url) => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(url, {
+      .post(url, data, {
         headers: {
           'Authorization': 'Token 52f97b98e50d36c9194cbc6cfc27f1776f856419',
-        }
+        },
       })
       .then((response) => {
         setData(response.data);
@@ -32,4 +32,4 @@ const useFetch = (url) => {
   };
 };
 
-export default useFetch;
+export default usePost;

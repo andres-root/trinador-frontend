@@ -1,4 +1,5 @@
 import React from 'react';
+import PostInput from '../components/PostInput';
 
 import Timeline from '../components/Timeline';
 

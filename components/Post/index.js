@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Post = ({ content, user }) => {
+const Post = ({ content, name, username }) => {
   return (
     <article className='post'>
-      <h2>{user.name}</h2>
-      <h3>{user.username}</h3>
+      <h2>{name}</h2>
+      <h3>{username}</h3>
       <p>{content}</p>
     </article>
   )
